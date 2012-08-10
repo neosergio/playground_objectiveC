@@ -1,42 +1,23 @@
 //
-//  Fraction.m
-//  FractionTest
+// Fraction.m
 //
-//  Created by Sergio Infante on 8/9/12.
-//  Copyright (c) 2012 Taller Technologies. All rights reserved.
-//
+// Created by Sergio Infante on 10/8/12
+// Copyright (c) 2012 Taller Technologies. All rights reserved
 
 #import "Fraction.h"
 
 @implementation Fraction
+
+@synthesize numerator, denominator;
+
+- (void) print
 {
-    int numerator;
-    int denominator;
-}
-- (void)setNumerator:(int)n
-{
-    numerator = n;
-}
-- (void)setDenominator:(int)d
-{
-    denominator = d;
-}
-- (void)print
-{
-    NSLog(@"The fraction is %i/%i", numerator, denominator);
-}
-- (int) numerator
-{
-    return numerator;
-}
-- (int) denominator
-{
-    return denominator;
+    NSLog(@"%i/%i", numerator, denominator);
 }
 - (double) convertToNum
 {
     if (denominator != 0)
-        return (double) numerator/denominator;
+        return (double) numerator / denominator;
     else
         return NAN;
 }
