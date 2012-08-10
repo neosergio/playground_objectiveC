@@ -13,5 +13,9 @@
 @property int numerator, denominator;
 
 - (void) print;
+- (void) setTo: (int)n over: (int)d;
+//- (void) add: (Fraction *) f;
+- (Fraction *) add: (Fraction *) f;
 - (double) convertToNum;
+- (void) reduce;
 @end
